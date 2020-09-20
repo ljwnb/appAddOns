@@ -12,11 +12,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.app.*;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+//import android.annotation.NonNull;
+//import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends  Activity  implements View.OnClickListener{
 
     private static final String TAG = "MainActivity";
 
@@ -106,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mHandler = new Handler(MyThread2.getLooper(), new Handler.Callback() {
             @Override
-            public boolean handleMessage(@NonNull Message msg) {
+            public boolean handleMessage(Message msg) {
                 Log.d(TAG, "get Message " + mMessageCnt++);
                 return false;
             }
